@@ -1,9 +1,9 @@
 <script setup>
-import AddAnime from "./components/AddAnime.vue";
+
 </script>
 
 <template>
-  <AddAnime/>
+
 </template>
 
 <style scoped>
