@@ -1,5 +1,9 @@
 <script setup>
+import {ref} from 'vue'
 
+const btnAdd = () => {
+  console.log('Botón clickeado')
+}
 </script>
 
 <template>
@@ -8,6 +12,7 @@
       max-width="360"
   >
     <v-text-field
+        class="input-anime"
         hide-details="auto"
         variant="solo"
         placeholder="Anime"
@@ -21,6 +26,7 @@
             class="btn-agregar"
             flat
             rounded
+            @click="btnAdd"
         >
           Agregar
         </v-btn>

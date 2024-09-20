@@ -1,5 +1,6 @@
 <script setup>
-
+const ul = document.querySelector('ul')
+const empty = document.querySelector('.empty')
 </script>
 
 <template>
