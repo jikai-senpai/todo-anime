@@ -29,6 +29,6 @@
 .btn-agregar {
   text-transform: none;
   color: #fff;
-  background-color: red;
+  background-color: #006adc;
 }
 </style>
