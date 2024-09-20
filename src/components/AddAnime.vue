@@ -1,8 +1,9 @@
 <script setup>
 import {ref} from 'vue'
 
+const animeName = ref('')
 const btnAdd = () => {
-  console.log('Botón clickeado')
+  console.log(animeName.value)
 }
 </script>
 
@@ -12,7 +13,7 @@ const btnAdd = () => {
       max-width="360"
   >
     <v-text-field
-        class="input-anime"
+        v-model="animeName"
         hide-details="auto"
         variant="solo"
         placeholder="Anime"
