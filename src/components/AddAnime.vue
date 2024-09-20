@@ -1,9 +1,14 @@
 <script setup>
+import DataAnime from "./DataAnime.vue";
 import {ref} from 'vue'
 
+const animeItems = ref([])
 const animeName = ref('')
+
 const btnAdd = () => {
   console.log(animeName.value)
+  animeItems.value.push(animeName.value)
+  animeName.value = ''
 }
 </script>
 
@@ -14,6 +19,7 @@ const btnAdd = () => {
   >
     <v-text-field
         v-model="animeName"
+        @keyup.enter="btnAdd"
         hide-details="auto"
         variant="solo"
         placeholder="Anime"
