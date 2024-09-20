@@ -17,7 +17,11 @@
         flat
     >
       <template v-slot:append>
-        <v-btn class="btn-agregar" flat rounded>
+        <v-btn
+            class="btn-agregar"
+            flat
+            rounded
+        >
           Agregar
         </v-btn>
       </template>
