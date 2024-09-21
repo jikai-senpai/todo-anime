@@ -1,4 +1,9 @@
 <script setup>
+import {ref} from "vue";
+import ItemAnime from "./ItemAnime.vue";
+
+const animeItems = ref([])
+
 </script>
 
 <template>
@@ -6,7 +11,9 @@
     <h3>Lista de animes</h3>
     <div class="lista_anime">
       <ul>
-
+        <li v-for="variableBucleAnime in animeItems" :key="variableBucleAnime">
+          <ItemAnime :my-prop-anime="variableBucleAnime"/>
+        </li>
       </ul>
     </div>
     <div class="empty">

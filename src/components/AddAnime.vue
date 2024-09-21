@@ -1,5 +1,4 @@
 <script setup>
-import DataAnime from "./DataAnime.vue";
 import {ref} from 'vue'
 
 const animeItems = ref([])

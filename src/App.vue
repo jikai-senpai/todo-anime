@@ -1,6 +1,6 @@
 <script setup>
 import AddAnime from "./components/AddAnime.vue";
-import ContainerAnime from "./components/ContainerAnime.vue";
+import ListAnime from "./components/ListAnime.vue";
 </script>
 
 <template>
@@ -8,7 +8,7 @@ import ContainerAnime from "./components/ContainerAnime.vue";
         <h1 class="display-1 text-center title-list">Anime</h1>
         <div>
           <AddAnime/>
-          <ContainerAnime/>
+          <ListAnime/>
         </div>
   </v-container>
 </template>
