@@ -6,7 +6,7 @@ const emit = defineEmits(['addAnime'])
 
 const btnAdd = () => {
   if (animeName.value.trim()) {
-    emit('addAnime', animeName.value)
+    emit('addAnime', animeName.value + '.')
     animeName.value = ''
   }
 }
