@@ -1,12 +1,16 @@
 <script setup>
-import {ref} from 'vue'
-import AddAnime from "./components/AddAnime.vue";
-import ListAnime from "./components/ListAnime.vue";
+import { ref } from 'vue'
+import AddAnime from './components/AddAnime.vue'
+import ListAnime from './components/ListAnime.vue'
 
 const animeItems = ref([])
 
 const handleAddAnime = (animeName) => {
   animeItems.value.push(animeName)
+}
+
+const handleDeleteAnime = (animeName) => {
+  animeItems.value = animeItems.value.filter(item => item !== animeName)
 }
 </script>
 
@@ -15,7 +19,7 @@ const handleAddAnime = (animeName) => {
     <h1 class="display-1 text-center title-list">Anime</h1>
     <div>
       <AddAnime @add-anime="handleAddAnime"/>
-      <ListAnime :anime-items="animeItems"/>
+      <ListAnime :anime-items="animeItems" @delete-anime="handleDeleteAnime"/>
     </div>
   </v-container>
 </template>

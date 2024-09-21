@@ -1,13 +1,18 @@
 <script setup>
-import {ref} from "vue";
-import ItemAnime from "./ItemAnime.vue";
+import ItemAnime from './ItemAnime.vue'
 
-defineProps({
+const props = defineProps({
   animeItems: {
     type: Array,
     required: true
   }
 })
+
+const emit = defineEmits(['deleteAnime'])
+
+const handleDeleteAnime = (animeName) => {
+  emit('deleteAnime', animeName)
+}
 </script>
 
 <template>
@@ -15,8 +20,8 @@ defineProps({
     <h3>Lista de animes</h3>
     <div class="lista_anime">
       <ul>
-        <li v-for="variableBucleAnime in animeItems" :key="variableBucleAnime">
-          <ItemAnime :my-prop-anime="variableBucleAnime"/>
+        <li v-for="variableBucleAnime in props.animeItems" :key="variableBucleAnime">
+          <ItemAnime :my-prop-anime="variableBucleAnime" @deleteAnime="handleDeleteAnime"/>
         </li>
       </ul>
     </div>
