@@ -1,13 +1,15 @@
 <script setup>
 import {ref} from 'vue'
 
-const animeItems = ref([])
 const animeName = ref('')
+const emit = defineEmits(['addAnime'])
 
 const btnAdd = () => {
   console.log(animeName.value)
-  animeItems.value.push(animeName.value)
-  animeName.value = ''
+  if (animeName.value.trim()) {
+    emit('addAnime', animeName.value)
+    animeName.value = ''
+  }
 }
 </script>
 

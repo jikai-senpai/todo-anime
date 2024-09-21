@@ -2,8 +2,12 @@
 import {ref} from "vue";
 import ItemAnime from "./ItemAnime.vue";
 
-const animeItems = ref([])
-
+defineProps({
+  animeItems: {
+    type: Array,
+    required: true
+  }
+})
 </script>
 
 <template>
