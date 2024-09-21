@@ -20,9 +20,6 @@ defineProps({
         </li>
       </ul>
     </div>
-    <div class="empty">
-      <p>No tienes animes</p>
-    </div>
   </div>
 </template>
 
@@ -33,5 +30,14 @@ defineProps({
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.lista_anime ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista_anime li {
+  margin: 5px 0;
 }
 </style>

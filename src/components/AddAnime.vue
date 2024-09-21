@@ -5,7 +5,6 @@ const animeName = ref('')
 const emit = defineEmits(['addAnime'])
 
 const btnAdd = () => {
-  console.log(animeName.value)
   if (animeName.value.trim()) {
     emit('addAnime', animeName.value)
     animeName.value = ''
